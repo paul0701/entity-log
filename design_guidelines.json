@@ -1,0 +1,106 @@
+{
+  "project_name": "Dead by Daylight Global Match Tracker",
+  "archetype": "THE PERFORMANCE PRO / DARK ATMOSPHERIC FOG",
+  "theme_mode": "dark",
+  "target_platform": "mobile_web_app_pwa",
+  "typography": {
+    "heading_font": "Cinzel, Unbounded, Barlow Condensed, sans-serif",
+    "body_font": "Manrope, DM Sans, system-ui, sans-serif",
+    "mono_font": "JetBrains Mono, monospace",
+    "hierarchy": {
+      "h1_hero": "text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight uppercase text-stone-100 drop-shadow-[0_2px_10px_rgba(220,38,38,0.5)]",
+      "h2_section": "text-xl sm:text-2xl font-bold tracking-wide uppercase text-red-500 border-b border-red-950/60 pb-2",
+      "h3_card_title": "text-lg sm:text-xl font-semibold text-stone-200 tracking-wide",
+      "body": "text-sm sm:text-base leading-relaxed text-stone-300",
+      "caption_label": "text-xs font-mono uppercase tracking-[0.2em] text-red-400/80"
+    }
+  },
+  "colors": {
+    "background_base": "#07080C",
+    "background_card": "#0F111A",
+    "background_card_hover": "#161926",
+    "background_elevated": "#1A1D2C",
+    "border_subtle": "rgba(220, 38, 38, 0.2)",
+    "border_active": "rgba(220, 38, 38, 0.8)",
+    "primary_red": "#DC2626",
+    "primary_red_glow": "rgba(220, 38, 38, 0.4)",
+    "crimson_accent": "#991B1B",
+    "ember_warmth": "#F59E0B",
+    "blood_active": "#EF4444",
+    "survivor_green": "#10B981",
+    "sacrifice_purple": "#A855F7",
+    "text_primary": "#F5F5F4",
+    "text_secondary": "#A8A29E",
+    "text_muted": "#78716C"
+  },
+  "layout_and_spacing": {
+    "container_wrapper": "max-w-md mx-auto min-h-screen bg-[#07080C] text-stone-100 flex flex-col justify-between pb-24 shadow-2xl border-x border-red-950/30",
+    "grid_killer_cards": "grid grid-cols-4 gap-2 sm:gap-3 p-3 bg-[#0F111A]/80 backdrop-blur-md rounded-xl border border-red-950/40",
+    "bottom_nav": "fixed bottom-0 left-1/2 -translate-x-1/2 max-w-md w-full z-50 bg-[#0A0C14]/95 backdrop-blur-xl border-t border-red-900/40 p-2 flex justify-around items-center shadow-[0_-5px_25px_rgba(0,0,0,0.8)]",
+    "padding_standard": "px-4 py-3 sm:px-6 sm:py-4"
+  },
+  "key_features_design": {
+    "quick_logger": {
+      "target_time": "Under 10 seconds per trial",
+      "killer_portrait_grid": "4-column thumb-friendly cards with high-contrast killer portraits, red active aura ring, and character name badge",
+      "survivor_picker": "Horizontal scrollable avatar selector with high-contrast active state",
+      "outcome_buttons": "Large tactile touch targets: Escaped (Green), Sacrificed (Red), Bled Out (Orange), Killed/Mori (Purple)",
+      "advanced_stats_collapsible": "Smooth slide accordion containing sliders/steppers for chase duration (seconds), protection hits count, safe unhooks count"
+    },
+    "authentication": {
+      "type": "Email + PIN code modal / full screen auth drawer",
+      "reset_flow": "Emailed PIN reset simulation with interactive 4-digit OTP input box"
+    },
+    "personal_dashboard": {
+      "widgets": "Nemesis Killer card, Best Survivor card, Escape/Kill Rate Circular Gauge, Trend Chart (Recharts dark theme with blood-red line & ember dots)",
+      "match_history": "Filterable list of trials with instant swipe/button delete action (`data-testid=\"delete-match-{id}\"`)",
+      "per_killer_breakdown": "Dense statistical table with escape rate bar indicators"
+    },
+    "global_leaderboards": {
+      "tabs": ["The Entity's Best (Kill Rate & Sacrifices)", "Survivor Standouts (Escape Volume & Survival Rate)", "Pick Rates (7-Day Rolling)"],
+      "rank_badges": "Gold/Silver/Bronze ember badges for top 3 players"
+    },
+    "admin_controls": {
+      "kill_switch": "Toggle switch in header/settings to replace licensed portrait images with clean dark typography badges for legal safety tests"
+    },
+    "legal_disclaimer": {
+      "footer": "Persistent low-contrast fan disclaimer footer: 'Unofficial fan-made project. Dead by Daylight is a registered trademark of Behaviour Interactive Inc. Not affiliated with or endorsed by Behaviour Interactive.'"
+    }
+  },
+  "image_urls": {
+    "atmospheric_fog_bg": "https://images.unsplash.com/photo-1742774101914-1925309b1971?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTZ8MHwxfHNlYXJjaHwxfHxkYXJrJTIwYXRtb3NwaGVyaWMlMjBmb2clMjBob3Jyb3IlMjByZWQlMjBlbWJlciUyMGdsb3dpbmclMjBiYWNrZ3JvdW5kfGVufDB8fHx8MTc5MjUwODA0N3ww&ixlib=rb-4.1.0&q=85",
+    "blood_ember_texture": "https://images.unsplash.com/photo-1601326167532-d457cd8186cc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHwxfHxkYXJrJTIwZmFudGFzeSUyMGJsb29kJTIwcmVkJTIwZm9nJTIwdGV4dHVyZSUyMGJhY2tncm91bmR8ZW58MHx8fHwxNzkyNTA4MDQ3fDA&ixlib=rb-4.1.0&q=85",
+    "glowing_coals": "https://images.pexels.com/photos/33011264/pexels-photo-33011264.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+  },
+  "testing_and_data_attributes": {
+    "mandatory_data_testids": [
+      "log-trial-tab",
+      "my-stats-tab",
+      "global-leaderboards-tab",
+      "killer-card-{killer_id}",
+      "survivor-card-{survivor_id}",
+      "outcome-escaped-btn",
+      "outcome-sacrificed-btn",
+      "outcome-bledout-btn",
+      "outcome-mori-btn",
+      "advanced-stats-toggle",
+      "submit-trial-btn",
+      "auth-email-input",
+      "auth-pin-input",
+      "auth-submit-btn",
+      "forgot-pin-btn",
+      "admin-killswitch-toggle",
+      "delete-match-btn",
+      "leaderboard-tab-killers",
+      "leaderboard-tab-survivors",
+      "leaderboard-tab-pickrates"
+    ]
+  },
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
+    "Always maintain mobile-first PWA responsiveness (centered container max-w-md or max-w-lg on desktop viewports).",
+    "Never use pure #000000 background; use tinted near-black #07080C with subtle red/ember radial gradients or grain texture overlay.",
+    "Add data-testid attributes to all interactive buttons, tabs, outcome selectors, form inputs, and delete triggers.",
+    "Ensure killer and survivor selection has instant visual feedback (glowing red stroke, scale up micro-animation).",
+    "Keep trial logging under 10 seconds workflow with clear single-tap choices."
+  ]
+}

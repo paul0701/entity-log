@@ -1,0 +1,14 @@
+{
+  "short_name": "Entity Ledger",
+  "name": "Entity Ledger - DbD Match Tracker",
+  "description": "Log Dead by Daylight trials in 10 seconds. Unofficial fan project.",
+  "icons": [
+    { "src": "icon.svg", "type": "image/svg+xml", "sizes": "any", "purpose": "any maskable" }
+  ],
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#07080C",
+  "background_color": "#07080C"
+}
